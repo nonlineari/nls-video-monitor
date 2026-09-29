@@ -1,0 +1,3 @@
+# GravityDesktop/.venv — used by yt-dlp-run (TLS/JA3) AND gravity-serve (import yt_dlp)
+curl_cffi>=0.10
+yt-dlp>=2024.4.9

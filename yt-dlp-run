@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Run bundled yt-dlp with the local venv so curl_cffi Chrome impersonate works.
+# VP56/libvpx is a video codec — not a TLS impersonate target.
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")" && pwd)"
+PY="${ROOT}/.venv/bin/python3"
+if [[ ! -x "$PY" ]]; then
+  PY="$(command -v python3)"
+fi
+exec "$PY" "${ROOT}/yt-dlp" "$@"
